@@ -14,7 +14,7 @@ window.onload = () =>{
    	canvas.height = height - 300;
 
 
-   canvasContainer.addEventListener("resize",()=>{
+   window.addEventListener("resize",()=>{
 
    	canvas.width = window.innerWidth;
    	canvas.height = window.innerHeight;
