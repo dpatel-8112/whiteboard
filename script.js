@@ -1,6 +1,8 @@
 window.onload = () =>{
 
    var canvas = document.querySelector("#canvas");
+   var canvasContainer = document.querySelector("#canvasContainer");
+   var clear = document.querySelector("#clear");
    var ctx = canvas.getContext("2d");
    const colors = document.querySelectorAll(".colors");
 
@@ -8,11 +10,11 @@ window.onload = () =>{
 
  
     canvas.width = window.innerWidth;
-   	canvas.height = window.innerHeight;
+   	height = window.innerHeight;
+   	canvas.height = height - 300;
 
 
-
-   window.addEventListener("resize",()=>{
+   canvasContainer.addEventListener("resize",()=>{
 
    	canvas.width = window.innerWidth;
    	canvas.height = window.innerHeight;
@@ -77,5 +79,4 @@ window.onload = () =>{
    	colors[i].addEventListener('click', updateColor);
    }
   
-
 }
